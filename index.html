@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="bookmark" type="image/x-icon" href="./favicon.ico"/>
+  <link rel="icon" href="./favicon.ico">
+
+  <title>yuxuanBlog</title>
+</head>
+<body>
+  <header>
+     <div id="about"></div>
+    <div class="show">
+      <nav id="mainnav">
+        <div id="menutoggle">
+          <div></div>
+        </div>
+          <ul class="jump-list">
+            <li><a href="#about" class="scroll">About me</a></li>
+            <li><a href="#works" class="scroll">Works</a></li>
+            <li><a href="#fav" class="scroll">Fav</a></li>
+            <li><a href="#contact" class="scroll" >Contact</a></li>
+            <li><a href="./datenschutz.html" class="scroll" >Datenschutz</a></li>
+          </ul>
+          <button id="burger-icon">
+            <span class="line i1"></span>
+            <span class="line i2"></span>
+            <span class="line i3"></span>
+          </button>
+      </nav>
+    </div>
+
+
+    <nav class="navbar">  
+      <img src="./asset/logo.png" alt="" class="logo">
+      <ul class="nav-list">
+        <li><a href="#about" class="scroll">About me</a></li>
+        <li><a href="#works" class="scroll">Works</a></li>
+        <li><a href="#fav" class="scroll">Fav</a></li>
+        <li><a href="#contact" class="scroll">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="row">
+      <div class="aboutme">
+        <p>
+          I'm Yuxuan Yang, UX Desinger and frontend engineer. I try to give movement, smartness, fun and interactivity to user in my work. Have fun and check out my projects:)
+        </p>
+      </div>
+    </div>
+   
+  </header>
+
+
+<!-- private kitchen -->
+<section class="private-kitchen" id="works">
+  <div class="container">
+    <h1>Private Kitchen</h1>
+    
+    <div class="des">
+      <div class="vertical-stripe"> 
+      <p>
+        This project is aimed at fast-paced young people in big cities who want a private kitchen where they can quickly experience the "taste of home."
+      </br>
+      </br>
+        If you were told that ordering food over the Internet would also make you feel like you were eating at home, would you be willing to try it?
+      </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CHINESE TEMPLE -->
+<section class="chinese-temple">
+   <h1>CHINESE TEMPLE</h1>
+  <div class="chinese-container">
+    <div class="img1"><img src="./asset/img1.png" alt=""></div>
+    <div class="img2"><img src="./asset/img2.png" alt=""></div>
+    <div class="img3"><img src="./asset/img3.png" alt=""></div>
+    <div class="img4"><img src="./asset/img4.png" alt=""></div>
+    <div class="img5"><img src="./asset/img5.png" alt=""></div>
+  </div>
+</section>
+
+<!-- works -->
+<section class="works">
+    <div class="work1">
+      <img src="./asset/dashweather.png" alt="">
+      <p>Weather dashboard</p>
+    </div>
+    <div class="work2">
+      <img src="./asset/book.png" alt="">
+      <p>Fanzine</p>
+    </div>
+    <div class="work3">
+      <img src="./asset/weg.png" alt="">
+      <p>Installion: the way to communication</p>
+    </div>
+</section>
+  
+
+<section class="fav">
+  <div id="fav"></div>
+  <div class="fav-container">
+    <div class="figma">
+      <img src="./asset/figma.png" alt="">
+      <h3>Figma</h3>
+      <p>Figma is a collaborative web application for interface design </p>
+    </div>
+    <div class="vercel">
+      <img src="./asset/vercel.png" alt="">
+      <h3>VERCEL</h3>
+      <p>Vercel is the platform for frontend developers</p>
+    </div>
+    <div class="docu">
+      <img src="./asset/docu.png" alt="">
+      <h3>Docusaurus</h3>
+      <p> Build optimized websites quickly, focus on your conten</p>
+    </div>
+    <div class="react">
+      <img src="./asset/react.png" alt="">
+      <h3>React</h3>
+      <p> a free and open-source front-end JavaScript library</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h1 class="contact-me">
+    Currently Looking for my Next Design Challenge 
+    druids8012@gmail.com
+  </h1>
+  <nav class="nav-footlist">
+  <ul class="foot-list">
+    <li><a href="https://www.instagram.com/yuuuu.yx/">Instragram</a></li>
+    <li><a href="https://rb-blog.vercel.app/">myblog</a></li>
+    <li><a href="https://github.com/Druidss">github</a></li>
+  </ul>
+  <p>  <a href="./datenschutz.html"> Copyright © 2023 Yuxuan Yang </a> </p>
+  </nav>
+</section>
+
+
+<script>
+
+const burgerIcon = document.getElementById("burger-icon");
+const nav = document.getElementById("mainnav");
+burgerIcon.addEventListener("click", function() {
+  nav.classList.toggle("active");
+});
+
+
+var links = document.querySelectorAll('.scroll');
+links.forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    nav.classList.toggle("active")
+    console.log("yes");
+    e.preventDefault();
+    this.classList.add('scroll');
+    setTimeout(function() {
+      window.location = link.href;
+    }, 500);
+  });
+});
+</script>
+</body>
+</html>
